@@ -15,14 +15,15 @@ class SecondaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 44,
-      width: double.infinity,
       child: GestureDetector(
         onTap: onPressed,
         child: Center(
           child: Text(
             text,
             style: TextStyle(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.primary.withOpacity(
+                    onPressed == null ? 0.5 : 1,
+                  ),
               fontWeight: FontWeight.bold,
             ),
           ),

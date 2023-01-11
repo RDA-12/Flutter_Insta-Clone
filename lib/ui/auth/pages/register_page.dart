@@ -18,6 +18,8 @@ class _RegisterPageState extends State<RegisterPage> {
   late final GlobalKey<FormState> _formKey;
   late final TextEditingController _phoneController;
   late final TextEditingController _emailController;
+  String _phone = "";
+  String _email = "";
 
   @override
   void initState() {
@@ -25,6 +27,16 @@ class _RegisterPageState extends State<RegisterPage> {
     _formKey = GlobalKey<FormState>();
     _phoneController = TextEditingController();
     _emailController = TextEditingController();
+    _phoneController.addListener(() {
+      setState(() {
+        _phone = _phoneController.text;
+      });
+    });
+    _emailController.addListener(() {
+      setState(() {
+        _email = _emailController.text;
+      });
+    });
   }
 
   @override
@@ -37,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 2,
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -78,6 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             decoration: const InputDecoration(
                               hintText: "Phone",
                             ),
+                            keyboardType: TextInputType.number,
                           ),
                           const VerticalSpace(space: 14),
                           Text(
@@ -86,8 +99,14 @@ class _RegisterPageState extends State<RegisterPage> {
                             style: Theme.of(context).textTheme.bodySmall,
                           ),
                           const VerticalSpace(space: 14),
-                          const PrimaryButton(
-                            onPressed: null,
+                          PrimaryButton(
+                            onPressed: _phone == ""
+                                ? null
+                                : () {
+                                    context.router.push(
+                                      PhoneConfRoute(phoneNumber: _phone),
+                                    );
+                                  },
                             text: "Next",
                           ),
                         ],
@@ -99,10 +118,17 @@ class _RegisterPageState extends State<RegisterPage> {
                             decoration: const InputDecoration(
                               hintText: "Email",
                             ),
+                            keyboardType: TextInputType.emailAddress,
                           ),
                           const VerticalSpace(space: 14),
-                          const PrimaryButton(
-                            onPressed: null,
+                          PrimaryButton(
+                            onPressed: _email == ""
+                                ? null
+                                : () {
+                                    context.router.push(
+                                      EmailConfRoute(email: _email),
+                                    );
+                                  },
                             text: "Next",
                           ),
                         ],
