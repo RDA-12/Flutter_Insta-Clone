@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants.dart';
+import '../../../core/routes/routes.gr.dart';
 import '../../widgets/primary_button.dart';
 import '../../widgets/secondary_button.dart';
 import '../../widgets/vertical_space.dart';
@@ -100,14 +102,22 @@ class _NamePasswordPageState extends State<NamePasswordPage> {
                       ),
                       const VerticalSpace(space: 12),
                       PrimaryButton(
-                        onPressed:
-                            _name == "" || _password == "" ? null : () {},
+                        onPressed: _name == "" || _password == ""
+                            ? null
+                            : () {
+                                context.router.replaceAll(
+                                  [const BottomNav()],
+                                );
+                              },
                         text: "Continue and sync contacts",
                       ),
                       const VerticalSpace(space: 10),
                       SecondaryButton(
-                        onPressed:
-                            _name == "" || _password == "" ? null : () {},
+                        onPressed: _name == "" || _password == ""
+                            ? null
+                            : () {
+                                context.router.replaceAll([const BottomNav()]);
+                              },
                         text: "Continue without sync contacts",
                       ),
                     ],

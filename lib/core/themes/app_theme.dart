@@ -21,5 +21,10 @@ class AppThemes {
         color: Colors.black.withOpacity(0.3),
       ),
     ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+    ),
   );
 }

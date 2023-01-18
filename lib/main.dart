@@ -3,6 +3,8 @@ import 'core/routes/routes.gr.dart';
 
 import 'core/themes/app_theme.dart';
 
+// TODO: extract style
+
 void main() {
   runApp(MyApp());
 }

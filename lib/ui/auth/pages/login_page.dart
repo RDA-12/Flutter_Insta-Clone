@@ -21,6 +21,8 @@ class _LoginPageState extends State<LoginPage> {
   late final GlobalKey<FormState> _formKey;
   late final TextEditingController _usernameController;
   late final TextEditingController _passwordController;
+  String _username = "";
+  String _password = "";
 
   @override
   void initState() {
@@ -28,6 +30,16 @@ class _LoginPageState extends State<LoginPage> {
     _formKey = GlobalKey<FormState>();
     _usernameController = TextEditingController();
     _passwordController = TextEditingController();
+    _usernameController.addListener(() {
+      setState(() {
+        _username = _usernameController.text;
+      });
+    });
+    _passwordController.addListener(() {
+      setState(() {
+        _password = _passwordController.text;
+      });
+    });
   }
 
   @override
@@ -67,8 +79,12 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     const VerticalSpace(space: 12),
-                    const PrimaryButton(
-                      onPressed: null,
+                    PrimaryButton(
+                      onPressed: _username == "" || _password == ""
+                          ? null
+                          : () {
+                              context.router.replaceAll([const BottomNav()]);
+                            },
                       text: "Log In",
                     ),
                     const VerticalSpace(space: 12),
@@ -84,7 +100,9 @@ class _LoginPageState extends State<LoginPage> {
                       text: "Log In with Facebook",
                       iconPath: AssetConstants.facebookIc,
                       textColor: Colors.blue,
-                      onPressed: () {},
+                      onPressed: () {
+                        context.router.replaceAll([const BottomNav()]);
+                      },
                     ),
                   ],
                 ),
