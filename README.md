@@ -1,16 +1,14 @@
-# insta_clone
+# Instagram Clone with Flutter
 
-A new Flutter project.
+I am trying to clone [Instagram](https://www.instagram.com) apps with Flutter. This project is still on progress and will be updated later.
 
-## Getting Started
+## Package that is used so far
 
-This project is a starting point for a Flutter application.
+-   [`auto_route`](https://pub.dev/packages/auto_route) - help navigate between screens
+-   [`flutter_launcher_icons`](https://pub.dev/packages/flutter_launcher_icons) - help create launcher icon for the apps
 
-A few resources to get you started if this is your first Flutter project:
+## Result so far
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="assets/docs/on_board.png" width="75">
+<img src="assets/docs/login.png" width="75">
+<img src="assets/docs/home.png" width="75">
