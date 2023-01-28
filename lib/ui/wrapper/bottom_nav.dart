@@ -14,7 +14,7 @@ class BottomNav extends StatelessWidget {
     return AutoTabsScaffold(
       routes: const [
         HomeRoute(),
-        ExploreRoute(),
+        ExploreWrapper(),
         ReelsRoute(),
         ShopRoute(),
         ProfileRoute(),

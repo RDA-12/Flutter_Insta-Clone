@@ -1,4 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:insta_clone/ui/explore/pages/explore_detail_page.dart';
+import 'package:insta_clone/ui/wrapper/explore_wrapper.dart';
 
 import '../../ui/auth/pages/birthday_page.dart';
 import '../../ui/auth/pages/change_username_page.dart';
@@ -19,7 +21,7 @@ import '../../ui/wrapper/bottom_nav.dart';
 @MaterialAutoRouter(
   replaceInRouteName: "Page,Route",
   routes: [
-    AutoRoute(page: OnBoardingPage, initial: true),
+    AutoRoute(page: OnBoardingPage),
     AutoRoute(page: LoginPage),
     AutoRoute(page: RegisterPage),
     AutoRoute(page: PhoneConfPage),
@@ -30,9 +32,16 @@ import '../../ui/wrapper/bottom_nav.dart';
     AutoRoute(page: ChangeUsernamePage),
     AutoRoute(
       page: BottomNav,
+      initial: true,
       children: [
         AutoRoute(page: HomePage, initial: true),
-        AutoRoute(page: ExplorePage),
+        AutoRoute(
+          page: ExploreWrapper,
+          children: [
+            AutoRoute(page: ExplorePage, initial: true),
+            AutoRoute(page: ExploreDetailPage),
+          ],
+        ),
         AutoRoute(page: ReelsPage),
         AutoRoute(page: ShopPage),
         AutoRoute(page: ProfilePage),

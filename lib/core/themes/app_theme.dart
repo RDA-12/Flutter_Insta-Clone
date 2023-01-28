@@ -11,6 +11,7 @@ class AppThemes {
   static final lightTheme = ThemeData.light(useMaterial3: true).copyWith(
     backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
     inputDecorationTheme: InputDecorationTheme(
+      isDense: true,
       border: _formBorderInput,
       contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
       enabledBorder: _formBorderInput,

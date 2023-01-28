@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants.dart';
-import '../../../domain/models/post_model.dart';
-import '../../widgets/vertical_space.dart';
-import 'expandable_text.dart';
-import 'photo_stack.dart';
-import 'post_action_row.dart';
-import 'username_header.dart';
+import '../../core/constants.dart';
+import '../../domain/models/post_model.dart';
+import '../home/widgets/expandable_text.dart';
+import '../home/widgets/photo_stack.dart';
+import '../home/widgets/post_action_row.dart';
+import '../home/widgets/username_header.dart';
+import 'vertical_space.dart';
 
 class Post extends StatefulWidget {
   /// Create a post instagram like widget with [post] data in it

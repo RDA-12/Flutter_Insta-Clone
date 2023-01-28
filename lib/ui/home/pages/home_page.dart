@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../core/constants.dart';
 import '../../../domain/models/post_model.dart';
 import '../../widgets/horizontal_space.dart';
-import '../widgets/post.dart';
+import '../../widgets/post.dart';
 import '../widgets/stories_profile.dart';
 
 class HomePage extends StatelessWidget {
