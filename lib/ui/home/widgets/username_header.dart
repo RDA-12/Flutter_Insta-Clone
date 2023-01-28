@@ -23,7 +23,10 @@ class UsernameHeader extends StatelessWidget {
       ),
       child: Row(
         children: [
-          PhotoProfile(photo: photo),
+          PhotoProfile(
+            photo: photo,
+            addBorder: false,
+          ),
           const HorizontalSpace(space: 12),
           Expanded(
             child: Text(

@@ -56,7 +56,10 @@ class BottomNav extends StatelessWidget {
             ),
             const BottomNavigationBarItem(
               label: "Profile",
-              icon: PhotoProfile(photo: AssetConstants.dummyPict),
+              icon: PhotoProfile(
+                photo: AssetConstants.dummyPict,
+                addBorder: false,
+              ),
             ),
           ],
         );
