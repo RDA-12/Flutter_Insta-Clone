@@ -22,6 +22,10 @@ class AppThemes {
         color: Colors.black.withOpacity(0.3),
       ),
     ),
+    tabBarTheme: const TabBarTheme(
+      labelColor: Colors.black,
+      unselectedLabelColor: Colors.black,
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: false,

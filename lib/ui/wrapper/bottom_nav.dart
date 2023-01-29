@@ -17,7 +17,7 @@ class BottomNav extends StatelessWidget {
         ExploreWrapper(),
         ReelsRoute(),
         ShopRoute(),
-        ProfileRoute(),
+        ProfileWrapper(),
       ],
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(

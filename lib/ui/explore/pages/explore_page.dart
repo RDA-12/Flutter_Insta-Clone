@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../../../core/constants.dart';
 import '../../../domain/models/post_model.dart';
-import '../widgets/content.dart';
+import '../../widgets/content.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});

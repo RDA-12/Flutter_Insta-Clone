@@ -11,10 +11,10 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i18;
-import 'package:flutter/material.dart' as _i19;
+import 'package:auto_route/auto_route.dart' as _i19;
+import 'package:flutter/material.dart' as _i20;
 
-import '../../domain/models/post_model.dart' as _i20;
+import '../../domain/models/post_model.dart' as _i21;
 import '../../ui/auth/pages/birthday_page.dart' as _i7;
 import '../../ui/auth/pages/change_username_page.dart' as _i9;
 import '../../ui/auth/pages/email_conf_page.dart' as _i5;
@@ -27,39 +27,40 @@ import '../../ui/explore/pages/explore_detail_page.dart' as _i17;
 import '../../ui/explore/pages/explore_page.dart' as _i16;
 import '../../ui/home/pages/home_page.dart' as _i11;
 import '../../ui/on_board/pages/on_boarding_page.dart' as _i1;
-import '../../ui/profile/pages/profile_page.dart' as _i15;
+import '../../ui/profile/pages/profile_page.dart' as _i18;
 import '../../ui/reels/pages/reels_page.dart' as _i13;
 import '../../ui/shop/pages/shop_page.dart' as _i14;
 import '../../ui/wrapper/bottom_nav.dart' as _i10;
 import '../../ui/wrapper/explore_wrapper.dart' as _i12;
+import '../../ui/wrapper/profile_wrapper.dart' as _i15;
 
-class AppRouter extends _i18.RootStackRouter {
-  AppRouter([_i19.GlobalKey<_i19.NavigatorState>? navigatorKey])
+class AppRouter extends _i19.RootStackRouter {
+  AppRouter([_i20.GlobalKey<_i20.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i18.PageFactory> pagesMap = {
+  final Map<String, _i19.PageFactory> pagesMap = {
     OnBoardingRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.OnBoardingPage(),
       );
     },
     LoginRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i2.LoginPage(),
       );
     },
     RegisterRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i3.RegisterPage(),
       );
     },
     PhoneConfRoute.name: (routeData) {
       final args = routeData.argsAs<PhoneConfRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i4.PhoneConfPage(
           key: args.key,
@@ -69,7 +70,7 @@ class AppRouter extends _i18.RootStackRouter {
     },
     EmailConfRoute.name: (routeData) {
       final args = routeData.argsAs<EmailConfRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i5.EmailConfPage(
           key: args.key,
@@ -78,20 +79,20 @@ class AppRouter extends _i18.RootStackRouter {
       );
     },
     NamePasswordRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i6.NamePasswordPage(),
       );
     },
     BirthdayRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i7.BirthdayPage(),
       );
     },
     UsernameRoute.name: (routeData) {
       final args = routeData.argsAs<UsernameRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i8.UsernamePage(
           key: args.key,
@@ -101,7 +102,7 @@ class AppRouter extends _i18.RootStackRouter {
     },
     ChangeUsernameRoute.name: (routeData) {
       final args = routeData.argsAs<ChangeUsernameRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i9.ChangeUsernamePage(
           key: args.key,
@@ -110,50 +111,50 @@ class AppRouter extends _i18.RootStackRouter {
       );
     },
     BottomNav.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i10.BottomNav(),
       );
     },
     HomeRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i11.HomePage(),
       );
     },
     ExploreWrapper.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i12.ExploreWrapper(),
       );
     },
     ReelsRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i13.ReelsPage(),
       );
     },
     ShopRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i14.ShopPage(),
       );
     },
-    ProfileRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+    ProfileWrapper.name: (routeData) {
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i15.ProfilePage(),
+        child: const _i15.ProfileWrapper(),
       );
     },
     ExploreRoute.name: (routeData) {
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i16.ExplorePage(),
       );
     },
     ExploreDetailRoute.name: (routeData) {
       final args = routeData.argsAs<ExploreDetailRouteArgs>();
-      return _i18.MaterialPageX<dynamic>(
+      return _i19.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i17.ExploreDetailPage(
           key: args.key,
@@ -161,86 +162,104 @@ class AppRouter extends _i18.RootStackRouter {
         ),
       );
     },
+    ProfileRoute.name: (routeData) {
+      return _i19.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i18.ProfilePage(),
+      );
+    },
   };
 
   @override
-  List<_i18.RouteConfig> get routes => [
-        _i18.RouteConfig(
+  List<_i19.RouteConfig> get routes => [
+        _i19.RouteConfig(
           OnBoardingRoute.name,
           path: '/on-boarding-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           LoginRoute.name,
           path: '/login-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           RegisterRoute.name,
           path: '/register-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           PhoneConfRoute.name,
           path: '/phone-conf-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           EmailConfRoute.name,
           path: '/email-conf-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           NamePasswordRoute.name,
           path: '/name-password-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           BirthdayRoute.name,
           path: '/birthday-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           UsernameRoute.name,
           path: '/username-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           ChangeUsernameRoute.name,
           path: '/change-username-page',
         ),
-        _i18.RouteConfig(
+        _i19.RouteConfig(
           BottomNav.name,
           path: '/',
           children: [
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               HomeRoute.name,
               path: '',
               parent: BottomNav.name,
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               ExploreWrapper.name,
               path: 'explore-wrapper',
               parent: BottomNav.name,
               children: [
-                _i18.RouteConfig(
+                _i19.RouteConfig(
                   ExploreRoute.name,
                   path: '',
                   parent: ExploreWrapper.name,
                 ),
-                _i18.RouteConfig(
+                _i19.RouteConfig(
                   ExploreDetailRoute.name,
                   path: 'explore-detail-page',
                   parent: ExploreWrapper.name,
                 ),
               ],
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               ReelsRoute.name,
               path: 'reels-page',
               parent: BottomNav.name,
             ),
-            _i18.RouteConfig(
+            _i19.RouteConfig(
               ShopRoute.name,
               path: 'shop-page',
               parent: BottomNav.name,
             ),
-            _i18.RouteConfig(
-              ProfileRoute.name,
-              path: 'profile-page',
+            _i19.RouteConfig(
+              ProfileWrapper.name,
+              path: 'profile-wrapper',
               parent: BottomNav.name,
+              children: [
+                _i19.RouteConfig(
+                  ProfileRoute.name,
+                  path: '',
+                  parent: ProfileWrapper.name,
+                ),
+                _i19.RouteConfig(
+                  ExploreDetailRoute.name,
+                  path: 'explore-detail-page',
+                  parent: ProfileWrapper.name,
+                ),
+              ],
             ),
           ],
         ),
@@ -249,7 +268,7 @@ class AppRouter extends _i18.RootStackRouter {
 
 /// generated route for
 /// [_i1.OnBoardingPage]
-class OnBoardingRoute extends _i18.PageRouteInfo<void> {
+class OnBoardingRoute extends _i19.PageRouteInfo<void> {
   const OnBoardingRoute()
       : super(
           OnBoardingRoute.name,
@@ -261,7 +280,7 @@ class OnBoardingRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.LoginPage]
-class LoginRoute extends _i18.PageRouteInfo<void> {
+class LoginRoute extends _i19.PageRouteInfo<void> {
   const LoginRoute()
       : super(
           LoginRoute.name,
@@ -273,7 +292,7 @@ class LoginRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.RegisterPage]
-class RegisterRoute extends _i18.PageRouteInfo<void> {
+class RegisterRoute extends _i19.PageRouteInfo<void> {
   const RegisterRoute()
       : super(
           RegisterRoute.name,
@@ -285,9 +304,9 @@ class RegisterRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.PhoneConfPage]
-class PhoneConfRoute extends _i18.PageRouteInfo<PhoneConfRouteArgs> {
+class PhoneConfRoute extends _i19.PageRouteInfo<PhoneConfRouteArgs> {
   PhoneConfRoute({
-    _i19.Key? key,
+    _i20.Key? key,
     required String phoneNumber,
   }) : super(
           PhoneConfRoute.name,
@@ -307,7 +326,7 @@ class PhoneConfRouteArgs {
     required this.phoneNumber,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
   final String phoneNumber;
 
@@ -319,9 +338,9 @@ class PhoneConfRouteArgs {
 
 /// generated route for
 /// [_i5.EmailConfPage]
-class EmailConfRoute extends _i18.PageRouteInfo<EmailConfRouteArgs> {
+class EmailConfRoute extends _i19.PageRouteInfo<EmailConfRouteArgs> {
   EmailConfRoute({
-    _i19.Key? key,
+    _i20.Key? key,
     required String email,
   }) : super(
           EmailConfRoute.name,
@@ -341,7 +360,7 @@ class EmailConfRouteArgs {
     required this.email,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
   final String email;
 
@@ -353,7 +372,7 @@ class EmailConfRouteArgs {
 
 /// generated route for
 /// [_i6.NamePasswordPage]
-class NamePasswordRoute extends _i18.PageRouteInfo<void> {
+class NamePasswordRoute extends _i19.PageRouteInfo<void> {
   const NamePasswordRoute()
       : super(
           NamePasswordRoute.name,
@@ -365,7 +384,7 @@ class NamePasswordRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.BirthdayPage]
-class BirthdayRoute extends _i18.PageRouteInfo<void> {
+class BirthdayRoute extends _i19.PageRouteInfo<void> {
   const BirthdayRoute()
       : super(
           BirthdayRoute.name,
@@ -377,9 +396,9 @@ class BirthdayRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.UsernamePage]
-class UsernameRoute extends _i18.PageRouteInfo<UsernameRouteArgs> {
+class UsernameRoute extends _i19.PageRouteInfo<UsernameRouteArgs> {
   UsernameRoute({
-    _i19.Key? key,
+    _i20.Key? key,
     required String username,
   }) : super(
           UsernameRoute.name,
@@ -399,7 +418,7 @@ class UsernameRouteArgs {
     required this.username,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
   final String username;
 
@@ -411,9 +430,9 @@ class UsernameRouteArgs {
 
 /// generated route for
 /// [_i9.ChangeUsernamePage]
-class ChangeUsernameRoute extends _i18.PageRouteInfo<ChangeUsernameRouteArgs> {
+class ChangeUsernameRoute extends _i19.PageRouteInfo<ChangeUsernameRouteArgs> {
   ChangeUsernameRoute({
-    _i19.Key? key,
+    _i20.Key? key,
     required String username,
   }) : super(
           ChangeUsernameRoute.name,
@@ -433,7 +452,7 @@ class ChangeUsernameRouteArgs {
     required this.username,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
   final String username;
 
@@ -445,8 +464,8 @@ class ChangeUsernameRouteArgs {
 
 /// generated route for
 /// [_i10.BottomNav]
-class BottomNav extends _i18.PageRouteInfo<void> {
-  const BottomNav({List<_i18.PageRouteInfo>? children})
+class BottomNav extends _i19.PageRouteInfo<void> {
+  const BottomNav({List<_i19.PageRouteInfo>? children})
       : super(
           BottomNav.name,
           path: '/',
@@ -458,7 +477,7 @@ class BottomNav extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i11.HomePage]
-class HomeRoute extends _i18.PageRouteInfo<void> {
+class HomeRoute extends _i19.PageRouteInfo<void> {
   const HomeRoute()
       : super(
           HomeRoute.name,
@@ -470,8 +489,8 @@ class HomeRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i12.ExploreWrapper]
-class ExploreWrapper extends _i18.PageRouteInfo<void> {
-  const ExploreWrapper({List<_i18.PageRouteInfo>? children})
+class ExploreWrapper extends _i19.PageRouteInfo<void> {
+  const ExploreWrapper({List<_i19.PageRouteInfo>? children})
       : super(
           ExploreWrapper.name,
           path: 'explore-wrapper',
@@ -483,7 +502,7 @@ class ExploreWrapper extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i13.ReelsPage]
-class ReelsRoute extends _i18.PageRouteInfo<void> {
+class ReelsRoute extends _i19.PageRouteInfo<void> {
   const ReelsRoute()
       : super(
           ReelsRoute.name,
@@ -495,7 +514,7 @@ class ReelsRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i14.ShopPage]
-class ShopRoute extends _i18.PageRouteInfo<void> {
+class ShopRoute extends _i19.PageRouteInfo<void> {
   const ShopRoute()
       : super(
           ShopRoute.name,
@@ -506,20 +525,21 @@ class ShopRoute extends _i18.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i15.ProfilePage]
-class ProfileRoute extends _i18.PageRouteInfo<void> {
-  const ProfileRoute()
+/// [_i15.ProfileWrapper]
+class ProfileWrapper extends _i19.PageRouteInfo<void> {
+  const ProfileWrapper({List<_i19.PageRouteInfo>? children})
       : super(
-          ProfileRoute.name,
-          path: 'profile-page',
+          ProfileWrapper.name,
+          path: 'profile-wrapper',
+          initialChildren: children,
         );
 
-  static const String name = 'ProfileRoute';
+  static const String name = 'ProfileWrapper';
 }
 
 /// generated route for
 /// [_i16.ExplorePage]
-class ExploreRoute extends _i18.PageRouteInfo<void> {
+class ExploreRoute extends _i19.PageRouteInfo<void> {
   const ExploreRoute()
       : super(
           ExploreRoute.name,
@@ -531,10 +551,10 @@ class ExploreRoute extends _i18.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i17.ExploreDetailPage]
-class ExploreDetailRoute extends _i18.PageRouteInfo<ExploreDetailRouteArgs> {
+class ExploreDetailRoute extends _i19.PageRouteInfo<ExploreDetailRouteArgs> {
   ExploreDetailRoute({
-    _i19.Key? key,
-    required List<_i20.PostModel> posts,
+    _i20.Key? key,
+    required List<_i21.PostModel> posts,
   }) : super(
           ExploreDetailRoute.name,
           path: 'explore-detail-page',
@@ -553,12 +573,24 @@ class ExploreDetailRouteArgs {
     required this.posts,
   });
 
-  final _i19.Key? key;
+  final _i20.Key? key;
 
-  final List<_i20.PostModel> posts;
+  final List<_i21.PostModel> posts;
 
   @override
   String toString() {
     return 'ExploreDetailRouteArgs{key: $key, posts: $posts}';
   }
+}
+
+/// generated route for
+/// [_i18.ProfilePage]
+class ProfileRoute extends _i19.PageRouteInfo<void> {
+  const ProfileRoute()
+      : super(
+          ProfileRoute.name,
+          path: '',
+        );
+
+  static const String name = 'ProfileRoute';
 }
